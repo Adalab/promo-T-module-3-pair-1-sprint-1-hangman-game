@@ -4,8 +4,10 @@ import '../styles/main.scss';
 
 function App() {
   const [numberOfErrors, setNumberOfError] = useState (0);
+  
   const handleClick = (event) => {
     setNumberOfError(numberOfErrors+1);
+   git
   }
   return (
     <div className="page">
@@ -52,7 +54,7 @@ function App() {
           </form>
           <button onClick={handleClick} className='sumbtn'>Incrementar</button>
         </section>
-        <section className="dummy error-5">
+        <section className="dummy error-{numberOfErrors}">
           <span className="error-13 eye"></span>
           <span className="error-12 eye"></span>
           <span className="error-11 line"></span>
