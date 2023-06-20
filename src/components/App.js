@@ -1,8 +1,12 @@
-
+import {useState} from 'react';
 import '../styles/main.scss';
 
 
 function App() {
+  const [numberOfErrors, setNumberOfError] = useState (0);
+  const handleClick = (event) => {
+    setNumberOfError(numberOfErrors+1);
+  }
   return (
     <div className="page">
       <header>
@@ -46,6 +50,7 @@ function App() {
               id="last-letter"
             />
           </form>
+          <button onClick={handleClick} className='sumbtn'>Incrementar</button>
         </section>
         <section className="dummy error-5">
           <span className="error-13 eye"></span>
