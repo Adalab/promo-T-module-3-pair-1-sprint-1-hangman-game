@@ -4,42 +4,42 @@ import '../styles/main.scss';
 
 function App() {
   return (
-    <div class="page">
+    <div className="page">
       <header>
-        <h1 class="header__title">Juego del ahorcado</h1>
+        <h1 className="header__title">Juego del ahorcado</h1>
       </header>
-      <main class="main">
+      <main className="main">
         <section>
-          <div class="solution">
-            <h2 class="title">Solución:</h2>
-            <ul class="letters">
-              <li class="letter">k</li>
-              <li class="letter">a</li>
-              <li class="letter"></li>
-              <li class="letter">a</li>
-              <li class="letter">k</li>
-              <li class="letter">r</li>
-              <li class="letter"></li>
-              <li class="letter">k</li>
-              <li class="letter">e</li>
-              <li class="letter">r</li>
+          <div className="solution">
+            <h2 className="title">Solución:</h2>
+            <ul className="letters">
+              <li className="letter">k</li>
+              <li className="letter">a</li>
+              <li className="letter"></li>
+              <li className="letter">a</li>
+              <li className="letter">k</li>
+              <li className="letter">r</li>
+              <li className="letter"></li>
+              <li className="letter">k</li>
+              <li className="letter">e</li>
+              <li className="letter">r</li>
             </ul>
           </div>
-          <div class="error">
-            <h2 class="title">Letras falladas:</h2>
-            <ul class="letters">
-              <li class="letter">f</li>
-              <li class="letter">q</li>
-              <li class="letter">h</li>
-              <li class="letter">p</li>
-              <li class="letter">x</li>
+          <div className="error">
+            <h2 className="title">Letras falladas:</h2>
+            <ul className="letters">
+              <li className="letter">f</li>
+              <li className="letter">q</li>
+              <li className="letter">h</li>
+              <li className="letter">p</li>
+              <li className="letter">x</li>
             </ul>
           </div>
-          <form class="form">
-            <label class="title" for="last-letter">Escribe una letra:</label>
+          <form className="form">
+            <label className="title" for="last-letter">Escribe una letra:</label>
             <input
               autocomplete="off"
-              class="form__input"
+              className="form__input"
               maxlength="1"
               type="text"
               name="last-letter"
@@ -47,20 +47,20 @@ function App() {
             />
           </form>
         </section>
-        <section class="dummy error-5">
-          <span class="error-13 eye"></span>
-          <span class="error-12 eye"></span>
-          <span class="error-11 line"></span>
-          <span class="error-10 line"></span>
-          <span class="error-9 line"></span>
-          <span class="error-8 line"></span>
-          <span class="error-7 line"></span>
-          <span class="error-6 head"></span>
-          <span class="error-5 line"></span>
-          <span class="error-4 line"></span>
-          <span class="error-3 line"></span>
-          <span class="error-2 line"></span>
-          <span class="error-1 line"></span>
+        <section className="dummy error-5">
+          <span className="error-13 eye"></span>
+          <span className="error-12 eye"></span>
+          <span className="error-11 line"></span>
+          <span className="error-10 line"></span>
+          <span className="error-9 line"></span>
+          <span className="error-8 line"></span>
+          <span className="error-7 line"></span>
+          <span className="error-6 head"></span>
+          <span className="error-5 line"></span>
+          <span className="error-4 line"></span>
+          <span className="error-3 line"></span>
+          <span className="error-2 line"></span>
+          <span className="error-1 line"></span>
         </section>
       </main>
     </div>
