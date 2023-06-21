@@ -4,11 +4,17 @@ import '../styles/main.scss';
 
 function App() {
   const [numberOfErrors, setNumberOfError] = useState (0);
+  const [lastLetter, setLastLetter] = useState('');
   
   const handleClick = (event) => {
     setNumberOfError(numberOfErrors+1);
-   
   }
+
+  const handleLastLetter = (event) => {
+  setLastLetter(event.target.value);
+
+  };
+
   return (
     <div className="page">
       <header>
@@ -50,6 +56,8 @@ function App() {
               type="text"
               name="last-letter"
               id="last-letter"
+              value={lastLetter}
+              onChange= {handleLastLetter}
             />
           </form>
           <button onClick={handleClick} className='sumbtn'>Incrementar</button>
