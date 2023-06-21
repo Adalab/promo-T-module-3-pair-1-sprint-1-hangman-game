@@ -7,7 +7,7 @@ function App() {
   
   const handleClick = (event) => {
     setNumberOfError(numberOfErrors+1);
-   git
+   
   }
   return (
     <div className="page">
@@ -42,11 +42,11 @@ function App() {
             </ul>
           </div>
           <form className="form">
-            <label className="title" for="last-letter">Escribe una letra:</label>
+            <label className="title" htmlFor="last-letter">Escribe una letra:</label>
             <input
-              autocomplete="off"
+              autoComplete="off"
               className="form__input"
-              maxlength="1"
+              maxLength="1"
               type="text"
               name="last-letter"
               id="last-letter"
@@ -54,7 +54,7 @@ function App() {
           </form>
           <button onClick={handleClick} className='sumbtn'>Incrementar</button>
         </section>
-        <section className="dummy error-{numberOfErrors}">
+        <section className={`dummy error-${numberOfErrors}`} >
           <span className="error-13 eye"></span>
           <span className="error-12 eye"></span>
           <span className="error-11 line"></span>
