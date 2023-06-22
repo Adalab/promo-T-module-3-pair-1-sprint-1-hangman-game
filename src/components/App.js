@@ -11,8 +11,12 @@ function App() {
   }
 
   const handleLastLetter = (event) => {
-  setLastLetter(event.target.value);
 
+  const regex = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ€]+$/u;
+  if (regex.test(event.target.value) || event.target.value === '') {
+    setLastLetter(event.target.value);
+    
+  }
   };
 
   return (
