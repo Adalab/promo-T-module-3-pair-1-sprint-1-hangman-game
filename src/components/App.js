@@ -1,23 +1,32 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import '../styles/main.scss';
 
 
 function App() {
-  const [numberOfErrors, setNumberOfError] = useState (0);
+  const [numberOfErrors, setNumberOfError] = useState(0);
   const [lastLetter, setLastLetter] = useState('');
-  
+  const [word, setWord] = useState('katakroker');
+  const [userLetters, setUserLetters] = useState([]);
+
   const handleClick = (event) => {
-    setNumberOfError(numberOfErrors+1);
+    setNumberOfError(numberOfErrors + 1);
   }
 
   const handleLastLetter = (event) => {
 
-  const regex = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ€]+$/u;
-  if (regex.test(event.target.value) || event.target.value === '') {
-    setLastLetter(event.target.value);
-    
-  }
+    const regex = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ€]+$/u;
+    if (regex.test(event.target.value) || event.target.value === '') {
+      setLastLetter(event.target.value);
+    }
+    setUserLetters([lastLetter]);
   };
+  const renderSolutionLetters = () => {
+
+    const wordLetters = word.split('');
+    return wordLetters.map((wordLetter) => {
+      return <li class="letter"></li>
+    });
+  }
 
   return (
     <div className="page">
@@ -28,17 +37,7 @@ function App() {
         <section>
           <div className="solution">
             <h2 className="title">Solución:</h2>
-            <ul className="letters">
-              <li className="letter">k</li>
-              <li className="letter">a</li>
-              <li className="letter"></li>
-              <li className="letter">a</li>
-              <li className="letter">k</li>
-              <li className="letter">r</li>
-              <li className="letter"></li>
-              <li className="letter">k</li>
-              <li className="letter">e</li>
-              <li className="letter">r</li>
+            <ul className="letters">{renderSolutionLetters()}
             </ul>
           </div>
           <div className="error">
@@ -61,7 +60,7 @@ function App() {
               name="last-letter"
               id="last-letter"
               value={lastLetter}
-              onChange= {handleLastLetter}
+              onChange={handleLastLetter}
             />
           </form>
           <button onClick={handleClick} className='sumbtn'>Incrementar</button>
