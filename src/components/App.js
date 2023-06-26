@@ -1,5 +1,5 @@
-import '../styles/components/App.scss';
 import { useEffect, useState } from 'react';
+import '../styles/components/App.scss'
 
 const handleInputSearch = (ev)=>{
   SetFraseSearch (ev.target.value);
