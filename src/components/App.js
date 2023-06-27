@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import '../styles/components/App.scss'
 
-const handleInputSearch = (ev)=>{
-  SetFraseSearch (ev.target.value);
-};
-
-const handleInputSearch = (ev)=>{
-  SetcharacterSearch (ev.target.value);
-};
 
 
 
 function App() {
   const [ frasesList, setFrasesList] =useState ([]);
+  const [fraseSearch, SetfraseSearch] = useState('');
+const [characterSearch, SetcharacterSearch] = useState('');
+const handleInputSearch = (ev)=>{
+  SetFraseSearch (ev.target.value);
+};
+
+/*const handleInputSearch = (ev)=>{
+  SetcharacterSearch (ev.target.value);
+};*/
 useEffect(() => {
   fetch('https://beta.adalab.es/curso-intensivo-fullstack-recursos/apis/quotes-friends-tv-v1/quotes.json')
   .then((response) => response.json())
@@ -53,7 +55,6 @@ useEffect(() => {
   </body>
 );}
 
-const [fraseSearch, SetfraseSearch] = useState('');
-const [characterSearch, SetcharacterSearch] = useState('');
+
 
 export default App;
